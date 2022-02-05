@@ -21,6 +21,8 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+
         html {
             height: 100%;
             padding: 0;
@@ -36,19 +38,42 @@
             border: 10px solid red;
             flex-direction: row;
             justify-content: center;
-            height: 100%;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: "Syne Tactile";
+            position: relative;
         }
 
-        img {
+        img,
+        video {
             width: 100%;
-            height: auto;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: powderblue;
         }
     </style>
 
 </head>
 
 <body>
-    <img width="200" src="./bg.png" />
+    <!--<img width="200" src="./bg.png" />-->
+    <video muted autoplay="autoplay" loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <h1>amputree</h1>
 </body>
 
 </html>
